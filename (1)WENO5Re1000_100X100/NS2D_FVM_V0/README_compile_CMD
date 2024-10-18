@@ -1,0 +1,9 @@
+
+cmd for compile
+mpif90 -O3 -c -ffast-math -fdefault-real-8 global.F90
+mpif90 -O3 -c -ffast-math -fdefault-real-8 common_grid.F90
+mpif90 -O3 -c -ffast-math -fdefault-real-8 elliptic.F90
+
+gmake -f Makefile.gnu Cart
+# run
+./Cart -ksp_type fgmres -pc_type hypre -ksp_monitor_short
